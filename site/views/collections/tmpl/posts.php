@@ -119,6 +119,7 @@ $this->css()
 										// Display comment button only if enabled
 										if ($this->config->get('allow_comments')):
 										?>
+										
 											<a class="btn comment" data-id="<?php echo $row->get('id'); ?>" href="<?php echo Route::url($base . '&controller=posts&post=' . $row->get('id') . '&task=comment'); ?>">
 												<span><?php echo Lang::txt('COM_COLLECTIONS_COMMENT'); ?></span>
 											</a>
