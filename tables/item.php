@@ -38,8 +38,8 @@ class Item extends Table
 	public function check()
 	{
 		$this->title       = trim($this->title);
-		$this->description = trim($this->description);
-		$this->url         = trim($this->url);
+		$this->description = trim($this->description == null ? '' : $this->description);
+		$this->url         = trim($this->url == null ? '' : $this->url);
 
 		if ($this->type != 'image' && $this->type != 'file'
 		 && (!$this->title && !$this->description && !$this->url))

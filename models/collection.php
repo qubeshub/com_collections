@@ -645,7 +645,7 @@ class Collection extends Base
 
 			case 'raw':
 			default:
-				$content = stripslashes($this->get('description'));
+				$content = stripslashes($this->get('description',''));
 				$content = preg_replace('/^(<!-- \{FORMAT:.*\} -->)/i', '', $content);
 			break;
 		}
